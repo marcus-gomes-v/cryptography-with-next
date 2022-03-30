@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -17,9 +17,17 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Leti&acute;s understand cryptography
+          Let&acute;s understand cryptography
         </p>
 
+        <div className={styles.grid}>
+          <Link href="/api/cryptography/hash">
+          <a className={styles.card}>
+            <h2>Hash &rarr;</h2>
+            <p></p>
+          </a>
+          </Link>
+        </div>
       </main>
 
     </div>
