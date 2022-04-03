@@ -11,7 +11,7 @@ export default function handler(req, res) {
 
   switch (method) {
     case 'POST':
-      res.status(200).json({ assymetricEncryption: oAsymmetricEncryption.do(message)  })
+      res.status(200).json({ response: oAsymmetricEncryption.do(message)  })
       break
     default:
       res.setHeader('Allow', ['POST'])
