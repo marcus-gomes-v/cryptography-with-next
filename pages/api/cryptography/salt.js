@@ -4,13 +4,16 @@ import Salt from '../libs/salt';
 
 export default function handler(req, res) {
 
-  const {
+  let {
     query: { email, password },
     body: { bEmail, bPassword },
     method,
   } = req
 
   const oSalt = new Salt();
+
+  if(typeof(email) != 'string' && typeof(bEmail) != 'string')
+    method = 'ERROR';
 
   switch (method) {
     case 'POST':
